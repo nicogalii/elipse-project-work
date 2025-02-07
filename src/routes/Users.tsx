@@ -1,18 +1,19 @@
-import CustomersList from "../components/CustomersList/CustomersList";
+
 import Sidebar from "../components/Sidebar/Sidebar";
+import UsersList from "../components/UsersList/UsersList";
 
 
-const Customer = () => {
+const Users = () => {
   return (
     <>
     <div className="page">
     <Sidebar/>
     <div className="content">
-    <CustomersList/>
+    <UsersList/>
     </div>
     </div>
     </>
   );
 };
 
-export default Customer;
+export default Users;
