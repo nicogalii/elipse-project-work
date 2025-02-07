@@ -10,22 +10,21 @@ const Login = () => {
         setIsAdmin(false)
     }, [setIsAdmin])
     return <>
-    <div className="login-simulation">
+        <div className="login-simulation">
 
-        <h1>Seleziona tipo di utente</h1>
-        <div className="btn-container">
+            <h1>Seleziona tipo di utente</h1>
+            <div className="btn-container">
 
-        <button onClick={() => {
-            navigate('/dashboard');
-        }}>Utente</button>
-        <button onClick={() => {
-            setIsAdmin(true);
-            navigate('/dashboard');
-        }}>SuperAdmin</button>
-        </div>
+                <button onClick={() => {
+                    navigate('/dashboard');
+                }}>Utente</button>
+                <button onClick={() => {
+                    setIsAdmin(true);
+                    navigate('/dashboard');
+                }}>SuperAdmin</button>
+            </div>
         </div>
     </>
-  );
 };
 
 export default Login;

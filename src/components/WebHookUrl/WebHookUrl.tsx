@@ -1,24 +1,8 @@
-import { useState } from "react";
+import useWebHookUrl from "../../hooks/useWebHookUrl";
 
 const WebHookUrl = () => {
-  const [url, setUrl] = useState("");
-  const [confirm, setConfirm] = useState<boolean>(false);
 
-  const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUrl(e.target.value);
-    setConfirm(false);
-  };
-
-  const handleConfirm = () => {
-    setConfirm(true);
-  };
-
-  const handleNotifySim = () => {
-    fetch(url, {
-      method: "POST",
-      body: "NOTIFICA!",
-    });
-  };
+    const {handleUrlChange, handleConfirm, handleNotifySim, confirm, url} = useWebHookUrl();
 
   return (
     <>
