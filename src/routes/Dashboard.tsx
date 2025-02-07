@@ -1,37 +1,16 @@
-import { useState } from 'react'
+
+import WebHookUrl from "../components/WebHookUrl/WebHookUrl";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 
 const Dashboard = () => {
-  const [url, setUrl] = useState('');
-  const [confirm, setConfirm] = useState<boolean>(false);
-
-  const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUrl(e.target.value)
-    setConfirm(false);
-  }
-
-  const handleConfirm = () => {
-    setConfirm(true);
-  }
-
-  const handleNotifySim = () => {
-    fetch(url, {
-      method: 'POST',
-      body: 'NOTIFICA!'
-    })
-  }
+    const {isAdmin} = useContext(AuthContext);
 
   return (
     <>
-    <p>Inserisci l'url dove ricevere notifiche webhook</p>
-    <input onChange={handleUrlChange} type="text" />
-    <button onClick={handleConfirm}>Conferma</button>
-    {confirm && (
-      <>
-      <p>L'url dove riceverai le notifiche è: {url}</p>
-    <button onClick={handleNotifySim}>Simula notifica</button>
-    </>
+    {!isAdmin && (
+        <WebHookUrl/>
     )}
-
     </>
   )
 }
