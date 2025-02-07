@@ -4,6 +4,7 @@ import AuthContext from "../context/AuthContext";
 import Sidebar from "../components/Sidebar/Sidebar";
 
 const Dashboard = () => {
+  
   const { isAdmin } = useContext(AuthContext);
 
   return (
