@@ -5,21 +5,22 @@ import Login from "./routes/Login";
 import { AuthProvider } from "./context/AuthProvider";
 import Customer from "./routes/Customer";
 import Users from "./routes/Users";
-
+import Shipment from "./routes/Shipment";
 
 function App() {
   return (
     <>
-    <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login/>}></Route>
-          <Route path="/dashboard/customers" element={<Customer/>}></Route>
-          <Route path="/dashboard/users" element={<Users/>}></Route>
-          <Route path="/dashboard/" element={<Dashboard/>}></Route>
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />}></Route>
+            <Route path="/dashboard/shipments" element={<Shipment />}></Route>
+            <Route path="/dashboard/customers" element={<Customer />}></Route>
+            <Route path="/dashboard/users" element={<Users />}></Route>
+            <Route path="/dashboard/" element={<Dashboard />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }

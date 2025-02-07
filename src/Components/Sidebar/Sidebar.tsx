@@ -11,7 +11,7 @@ return <>
 <nav className="sidebar">
 
 <ul>
-    <li>Elenco spedizioni</li>
+    <li onClick={()=> navigate('/dashboard/shipments')} >Elenco spedizioni</li>
     {isAdmin && (
         <>
         <li onClick={()=> navigate('/dashboard/customers')} >Elenco Clienti</li>

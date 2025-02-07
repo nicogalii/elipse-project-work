@@ -1,7 +1,6 @@
 import CustomersList from "../components/CustomersList/CustomersList";
 import Sidebar from "../components/Sidebar/Sidebar";
 
-
 const Customer = () => {
   return (
     <>

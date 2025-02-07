@@ -1,17 +1,17 @@
+import ShipmentsList from "../components/ShipmentsList/ShipmentsList";
 import Sidebar from "../components/Sidebar/Sidebar";
-import UsersList from "../components/UsersList/UsersList";
 
-const Users = () => {
+const Shipment = () => {
   return (
     <>
       <div className="page">
         <Sidebar />
         <div className="content">
-          <UsersList />
+          <ShipmentsList />
         </div>
       </div>
     </>
   );
 };
 
-export default Users;
+export default Shipment;
