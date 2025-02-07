@@ -1,4 +1,4 @@
-import CustomersList from "../Components/CustomersList/CustomersList";
+import CustomersList from "../components/CustomersList/CustomersList";
 
 const Shipment = () => {
   return (
