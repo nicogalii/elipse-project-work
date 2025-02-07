@@ -1,6 +1,6 @@
 import CustomersList from "../components/CustomersList/CustomersList";
 
-const Shipment = () => {
+const Customer = () => {
   return (
     <>
       <CustomersList />
@@ -8,4 +8,4 @@ const Shipment = () => {
   );
 };
 
-export default Shipment;
+export default Customer;
