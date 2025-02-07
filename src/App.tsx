@@ -5,6 +5,7 @@ import Login from "./routes/Login";
 import { AuthProvider } from "./context/AuthProvider";
 import Customer from "./routes/Customer";
 
+
 function App() {
   return (
     <>
