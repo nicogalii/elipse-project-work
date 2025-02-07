@@ -4,20 +4,26 @@ import AuthContext from "../context/AuthContext";
 
 const Login = () => {
     const navigate = useNavigate();
-    const {setIsAdmin} = useContext(AuthContext);
+    const { setIsAdmin } = useContext(AuthContext);
 
-    useEffect(()=> {
+    useEffect(() => {
         setIsAdmin(false)
     }, [setIsAdmin])
     return <>
-    <h3>Seleziona tipo di utente</h3>
-    <button onClick={()=> {
-        navigate('/dashboard');
-    }}>Utente</button>
-    <button onClick={()=> {
-        setIsAdmin(true);
-        navigate('/dashboard');
-    }}>SuperAdmin</button>
+    <div className="login-simulation">
+
+        <h1>Seleziona tipo di utente</h1>
+        <div className="btn-container">
+
+        <button onClick={() => {
+            navigate('/dashboard');
+        }}>Utente</button>
+        <button onClick={() => {
+            setIsAdmin(true);
+            navigate('/dashboard');
+        }}>SuperAdmin</button>
+        </div>
+        </div>
     </>
 }
 
