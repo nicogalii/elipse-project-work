@@ -2,20 +2,22 @@
 import WebHookUrl from "../components/WebHookUrl/WebHookUrl";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
-import { useNavigate } from "react-router";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const Dashboard = () => {
     const {isAdmin} = useContext(AuthContext);
-    const navigate = useNavigate();
 
   return (
     <>
+    <div className="page">
+
+    <Sidebar/>
+    <div className="content">
     {!isAdmin && (
         <WebHookUrl/>
     )}
-    {isAdmin && (
-        <button onClick={()=> navigate('/dashboard/customers')}>Lista clienti</button>
-    )}
+    </div>
+    </div>
     </>
   )
 }
