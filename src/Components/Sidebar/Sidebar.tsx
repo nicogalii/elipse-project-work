@@ -16,6 +16,7 @@ return <>
         <>
         <li onClick={()=> navigate('/dashboard/customers')} >Elenco Clienti</li>
         <li onClick={()=> navigate('/dashboard/users')}>Elenco Utenti</li>
+        <li onClick={()=> navigate('/dashboard/newuser')}>Aggiungi utente</li>
         </>
     )}
     {!isAdmin && (

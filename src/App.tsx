@@ -6,6 +6,7 @@ import { AuthProvider } from "./context/AuthProvider";
 import Customer from "./routes/Customer";
 import Users from "./routes/Users";
 import Shipment from "./routes/Shipment";
+import NewUser from "./routes/NewUser";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/dashboard/shipments" element={<Shipment />}></Route>
             <Route path="/dashboard/customers" element={<Customer />}></Route>
             <Route path="/dashboard/users" element={<Users />}></Route>
+            <Route path="/dashboard/newuser" element={<NewUser />}></Route>
             <Route path="/dashboard/" element={<Dashboard />}></Route>
           </Routes>
         </BrowserRouter>
