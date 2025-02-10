@@ -1,4 +1,4 @@
-import AddUser from "../Components/AddUser/AddUser";
+import AddUser from "../components/AddUser/AddUser";
 import Sidebar from "../components/Sidebar/Sidebar";
 
 const NewUser = () => {
