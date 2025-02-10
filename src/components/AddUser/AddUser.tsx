@@ -2,9 +2,7 @@ import "./AddUser.scss";
 import useAddUser from "../../hooks/useAddUser";
 
 const AddUser = () => {
-  
-  const {customers, handleChange, handleSubmit} = useAddUser();
-
+  const { customers, handleChange, handleSubmit } = useAddUser();
 
   return (
     <div className="add-user-form">

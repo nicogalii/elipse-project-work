@@ -1,4 +1,5 @@
 import useUsersApi from "../../hooks/useUsersApi";
+import './UsersList.scss';
 
 const UsersList = () => {
   const { users } = useUsersApi();
