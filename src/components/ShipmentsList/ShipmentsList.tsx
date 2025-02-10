@@ -1,4 +1,5 @@
 import useShipmentsApi from "../../hooks/useShipmentsApi";
+import './ShipmentsList.scss';
 
 const ShipmentsList = () => {
   const { shipments } = useShipmentsApi();

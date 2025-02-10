@@ -1,4 +1,5 @@
 import useCustomersApi from "../../hooks/useCustomersApi";
+import './CustomersList.scss';
 
 const CustomersList = () => {
   const { customers } = useCustomersApi();
