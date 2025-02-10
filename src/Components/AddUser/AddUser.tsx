@@ -26,8 +26,7 @@ const AddUser = () => {
 
       const handleSubmit = () => {
         console.log(user);
-        
-        
+        fetch('http://localhost:3000/users', {method:'POST', body: JSON.stringify(user)})
       }
 
 
