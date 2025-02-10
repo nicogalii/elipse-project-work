@@ -7,7 +7,7 @@ import Customer from "./routes/Customer";
 import Users from "./routes/Users";
 import Shipment from "./routes/Shipment";
 import NewUser from "./routes/NewUser";
-import Layout from "./leyout/Layout";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
