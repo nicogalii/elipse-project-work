@@ -10,14 +10,26 @@ const ShipmentsList = () => {
 
   return (
     <>
-      {shipments.map((shipment) => (
-        <div key={shipment.id_shipping}>
-          <h3>Corriere: {shipment.courier}</h3>
-          <p>Data di creazione: {formatDate(shipment.creation_date)}</p>
-          <p>Stato: {}</p>
-          <p>ID Cliente: {shipment.customer_id}</p>
-        </div>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>Corriere</th>
+            <th>Data di creazione</th>
+            <th>Stato</th>
+            <th>ID Cliente</th>
+          </tr>
+        </thead>
+        <tbody>
+          {shipments.map((shipment) => (
+            <tr key={shipment.id_shipping}>
+              <td>{shipment.courier}</td>
+              <td>{formatDate(shipment.creation_date)}</td>
+              <td>{shipment.status_name}</td>
+              <td>{shipment.customer_id}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };

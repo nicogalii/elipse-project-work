@@ -4,11 +4,20 @@ const CustomersList = () => {
   const { customers } = useCustomersApi();
   return (
     <>
-      {customers.map((customer) => (
-        <div key={customer.id}>
-          <h3>Nome azienda: {customer.name}</h3>
-        </div>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>Azienda</th>
+          </tr>
+        </thead>
+        <tbody>
+          {customers.map((customer) => (
+            <tr key={customer.id}>
+              <td>{customer.name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };
