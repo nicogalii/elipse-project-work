@@ -1,16 +1,12 @@
-import AddUser from "../Components/AddUser/AddUser";
-import Sidebar from "../components/Sidebar/Sidebar";
+import AddUser from "../components/AddUser/AddUser";
 
 const NewUser = () => {
-    return  <>
-      <div className="page">
-        <Sidebar />
-        <div className="content">
-            <h1>Aggiungi utente</h1>
-          <AddUser />
-        </div>
-      </div>
+  return (
+    <>
+      <h1>Aggiungi utente</h1>
+      <AddUser />
     </>
-}
+  );
+};
 
 export default NewUser;

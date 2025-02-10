@@ -1,7 +1,6 @@
 import WebHookUrl from "../components/WebHookUrl/WebHookUrl";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
-import Sidebar from "../components/Sidebar/Sidebar";
 
 const Dashboard = () => {
   
@@ -9,10 +8,9 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="page">
-        <Sidebar />
-        <div className="content">{!isAdmin && <WebHookUrl />}</div>
-      </div>
+
+       {!isAdmin && <WebHookUrl />}
+    
     </>
   );
 };
