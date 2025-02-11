@@ -28,7 +28,7 @@ const AddUser = () => {
         <select onChange={handleChange} name="customer" id="customer_id">
           <option value="">--Seleziona l'azienda cliente--</option>
           {customers.map((customer) => (
-            <option key={customer.id} value={customer.name}>
+            <option key={customer.customer_id} value={customer.customer_id}>
               {customer.name}
             </option>
           ))}

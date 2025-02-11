@@ -18,6 +18,8 @@ const useAddUser = () => {
         const name = e.target.id;
         const value = e.target.value;
         // const { name, value } = e.target;
+
+
         setUser((prevUser) => ({
             ...prevUser,
             [name]: value,
@@ -26,8 +28,17 @@ const useAddUser = () => {
 
 
     const handleSubmit = () => {
-        console.log(user);
-        fetch('http://localhost:3000/users', { method: 'POST', body: JSON.stringify(user) })
+        setUser((prevUser) => ({
+            ...prevUser,
+            customer_id: Number(user.customer_id)
+        }))
+        fetch('http://elipse-project-work-env.eba-qpijr2ce.eu-north-1.elasticbeanstalk.com/api/users', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(user) })
+        .then((res)=> {
+            return res.json()
+        })
+        .then((body)=> {
+            console.log(body);
+        })
     }
 
     return { customers, handleChange, handleSubmit }

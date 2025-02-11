@@ -1,5 +1,6 @@
 import useCustomersApi from "../../hooks/useCustomersApi";
 import useUsersApi from "../../hooks/useUsersApi";
+import DeleteUser from "../DeleteUser/DeleteUser";
 
 const UsersList = () => {
   const { users } = useUsersApi();
@@ -13,9 +14,11 @@ const UsersList = () => {
           <tr>
             <th>Nome</th>
             <th>Cognome</th>
+            <th>Username</th>
             <th>Email</th>
             <th>Telefono</th>
             <th>Azienda</th>
+            <th>Azioni</th>
           </tr>
         </thead>
         <tbody>
@@ -23,11 +26,13 @@ const UsersList = () => {
             <tr key={index}>
               <td>{user.name}</td>
               <td>{user.surname}</td>
+              <td>{user.username}</td>
               <td>{user.email}</td>
               <td>{user.telephone_number}</td>
               <td>{customers.filter((c)=> {
                 return c.customer_id === user.customer_id
               }).pop()?.name}</td>
+              <td><DeleteUser username={user.username}/></td>
             </tr>
           ))}
         </tbody>
