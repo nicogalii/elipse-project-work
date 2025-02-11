@@ -12,7 +12,7 @@ const CustomersList = () => {
         </thead>
         <tbody>
           {customers.map((customer) => (
-            <tr key={customer.id}>
+            <tr key={customer.customer_id}>
               <td>{customer.name}</td>
             </tr>
           ))}
