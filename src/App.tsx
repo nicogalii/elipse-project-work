@@ -8,6 +8,7 @@ import Users from "./routes/Users";
 import Shipment from "./routes/Shipment";
 import NewUser from "./routes/NewUser";
 import Layout from "./layout/Layout";
+import Delete from "./routes/Delete";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="users" element={<Users />}></Route>
               <Route path="newuser" element={<NewUser />}></Route>
             </Route>
+            <Route path="/userdelete" element={<Delete />}></Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>
