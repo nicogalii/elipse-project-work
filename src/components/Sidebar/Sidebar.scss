@@ -1,15 +1,16 @@
 aside nav {
   position: fixed;
-  height: 90vh;
+  height: calc(90vh - 15px);
   width: 200px;
   background-color: #2c3e50;
   color: white;
-  left: 0;
-  top: 10vh;
+  left: 5px;
+  top: calc(10vh + 10px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   z-index: 100;
+  border-radius: 10px;
 
   ul {
     flex-direction: column;
