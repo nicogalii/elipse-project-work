@@ -6,14 +6,21 @@ import "./Layout.scss";
 const Layout = () => {
   return (
     <>
-      <div className="layout">
-        <Header />
-        <div className="main-container">
-          <Sidebar />
-          <main className="content">
-            <Outlet />
-          </main>
+      <div className="container-grid">
+        {/* Header */}
+        <div className="container-grid-header">
+          <Header />
         </div>
+
+        {/* Sidebar */}
+        <div className="container-grid-sidebar">
+          <Sidebar />
+        </div>
+
+        {/* Content */}
+        <main className="container-grid-content">
+          <Outlet />
+        </main>
       </div>
     </>
   );

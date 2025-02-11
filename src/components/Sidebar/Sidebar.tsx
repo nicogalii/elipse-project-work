@@ -12,6 +12,7 @@ const Sidebar = () => {
       <aside>
         <nav>
           <ul>
+            <li>😊 Nome Cognome</li>
             <li onClick={() => navigate("/dashboard/shipments")}>
               Elenco spedizioni
             </li>
@@ -29,6 +30,10 @@ const Sidebar = () => {
               </>
             )}
             {!isAdmin && <li>Storico file</li>}
+          </ul>
+
+          <ul>
+            <li onClick={() => navigate("/")}>Impostazioni</li>
             <li onClick={() => navigate("/")}>Logout</li>
           </ul>
         </nav>

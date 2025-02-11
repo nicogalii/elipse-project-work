@@ -3,7 +3,9 @@ import UsersList from "../components/UsersList/UsersList";
 const Users = () => {
   return (
     <>
-      <UsersList />
+      <div className="content">
+        <UsersList />
+      </div>
     </>
   );
 };

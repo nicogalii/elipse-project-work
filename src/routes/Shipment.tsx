@@ -3,7 +3,9 @@ import ShipmentsList from "../components/ShipmentsList/ShipmentsList";
 const Shipment = () => {
   return (
     <>
-          <ShipmentsList />
+      <div className="content">
+        <ShipmentsList />
+      </div>
     </>
   );
 };
