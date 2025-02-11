@@ -1,4 +1,4 @@
 interface Customer {
-  id: string;
+  customer_id: number;
   name: string;
 }
