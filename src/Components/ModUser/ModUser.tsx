@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import useCustomersApi from "../../hooks/useCustomersApi";
 import './ModUser.scss';
 
@@ -10,7 +9,6 @@ type ModUserProps = {
 const ModUser = ({ username }: ModUserProps) => {
     const [modal, setModal] = useState(false);
     const { customers } = useCustomersApi();
-    const navigate = useNavigate();
 
     
     useEffect(()=> {
