@@ -3,8 +3,10 @@ import AddUser from "../components/AddUser/AddUser";
 const NewUser = () => {
   return (
     <>
-      <h1>Aggiungi utente</h1>
-      <AddUser />
+      <div className="content">
+        <h2>Aggiungi utente</h2>
+        <AddUser />
+      </div>
     </>
   );
 };

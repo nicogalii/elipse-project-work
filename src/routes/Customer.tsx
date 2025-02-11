@@ -3,7 +3,9 @@ import CustomersList from "../components/CustomersList/CustomersList";
 const Customer = () => {
   return (
     <>
-      <CustomersList />
+      <div className="content">
+        <CustomersList />
+      </div>
     </>
   );
 };

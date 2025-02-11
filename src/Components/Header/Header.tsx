@@ -5,6 +5,7 @@ const Header = () => {
     <>
       <header>
         <li>Logo</li>
+        <li>Inserimento url:</li>
       </header>
     </>
   );

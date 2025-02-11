@@ -3,7 +3,10 @@
 * {
   font-family: sans-serif;
 }
-
+h1 {
+  margin: 20px 0;
+  padding: 0;
+}
 .login-simulation {
   display: flex;
   flex-direction: column;
@@ -12,6 +15,8 @@
 
   h2 {
     text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   button {
@@ -31,4 +36,13 @@
     display: flex;
     justify-content: space-evenly;
   }
+}
+
+.content {
+  // background-color: red;
+  border-radius: 5px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
