@@ -1,6 +1,7 @@
 import useCustomersApi from "../../hooks/useCustomersApi";
 import useUsersApi from "../../hooks/useUsersApi";
 import DeleteUser from "../DeleteUser/DeleteUser";
+import ModUser from "../ModUser/ModUser";
 
 const UsersList = () => {
   const { users } = useUsersApi();
@@ -32,7 +33,10 @@ const UsersList = () => {
               <td>{customers.filter((c)=> {
                 return c.customer_id === user.customer_id
               }).pop()?.name}</td>
-              <td><DeleteUser username={user.username}/></td>
+              <td>
+                <DeleteUser username={user.username}/>
+                <ModUser username={user.username}/>
+              </td>
             </tr>
           ))}
         </tbody>
