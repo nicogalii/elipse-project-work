@@ -17,11 +17,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Login />}></Route>
             <Route path="/dashboard" element={<Layout />}>
-              <Route path="/dashboard/shipments" element={<Shipment />}></Route>
-              <Route path="/dashboard/customers" element={<Customer />}></Route>
-              <Route path="/dashboard/users" element={<Users />}></Route>
-              <Route path="/dashboard/newuser" element={<NewUser />}></Route>
               <Route index element={<Dashboard />}></Route>
+              <Route path="shipments" element={<Shipment />}></Route>
+              <Route path="customers" element={<Customer />}></Route>
+              <Route path="users" element={<Users />}></Route>
+              <Route path="newuser" element={<NewUser />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>
