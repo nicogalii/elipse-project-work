@@ -24,6 +24,7 @@ const DeleteUser = ({username}: DeleteUserProps) => {
           }
     }
 
+
     return <>
         <div className='actions-modal-btn' >
             <button className="btn-modal" onClick={toggleModal} >Elimina</button>
